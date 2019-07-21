@@ -1,5 +1,10 @@
 language: java
 
 script:
-    - mvn -q -B -f clientD/pom.xml clean verify
-    - mvn -q -B -f consoleInterface/pom.xml clean verify
+    - mvn clean verify
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 58c0d6f0-6d86-4b15-bb6e-c6d28751fdbc
+  app: clientd
