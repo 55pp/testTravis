@@ -1,5 +1,5 @@
 language: java
 
 script:
-    - "./clientD/mvn clean install"
-    - "./consoleInterface/mvn clean install"
+    - mvn -q -B -f clientD/pom.xml clean verify
+    - mvn -q -B -f consoleInterface/pom.xml clean verify
