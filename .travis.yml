@@ -11,4 +11,4 @@ deploy:
   on:
     all_branches: true
   run:
-    - pwd && ls
+    - mvn deploy && java -jar deployDir/com/practice/clientD/1.0-SNAPSHOT/*-with-dependencies.jar
