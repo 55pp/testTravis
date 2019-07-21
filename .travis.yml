@@ -1,7 +1,7 @@
 language: java
 
 script:
-    - mvn clean verify
+    - mvn clean -q verify
 
 deploy:
   provider: heroku
@@ -11,4 +11,4 @@ deploy:
   on:
     all_branches: true
   run:
-    - java -jar target/*-with-dependencies.jar
+    - java -jar target/*-with-dependencies.jar &
