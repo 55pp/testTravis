@@ -15,12 +15,22 @@
                 <configuration>
                     <source>7</source>
                     <target>7</target>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.practice.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
             <plugin>
               <groupId>com.heroku.sdk</groupId>
               <artifactId>heroku-maven-plugin</artifactId>
               <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.practice.Main</mainClass>
+                    </manifest>
+                </archive>
                 <appName>clientd</appName>
                 <processTypes>
                   <web>java -jar target/clientD.jar</web>
