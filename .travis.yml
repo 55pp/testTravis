@@ -11,4 +11,4 @@ deploy:
   on:
     all_branches: true
   run:
-    - java -jar target/clientD-1.0.jar
+    - java -jar target/clientD-1.0-jar-with-dependencies.jar
