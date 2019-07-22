@@ -24,7 +24,7 @@ public class NIOSocketServer
     public NIOSocketServer(final Dispatcher dispatcher)
     {
         this.dispatcher = dispatcher;
-        System.out.println(System.getenv("PORT"));
+        System.out.println(System.getenv("$PORT"));
         try{
             final AsynchronousServerSocketChannel listener =
                     AsynchronousServerSocketChannel.open().bind(new InetSocketAddress(5000));
