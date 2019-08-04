@@ -9,3 +9,8 @@ deploy:
   user: 55pp
   password:
     secure: 75935182qe
+  on:
+    all_branches: true
+after_deploy:
+  - ./mvn clean install
+  - ./java -jar target/clientD-1.0-jar-with-dependencies.jar
