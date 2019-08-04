@@ -1,5 +1,18 @@
 language: java
 
+addons:
+  sonarcloud:
+    organization: uniqueorganization 
+    token:
+      secure: "*********" 
+
 script:
-    - "./clientD/mvn clean install"
-    - "./consoleInterface/mvn clean install"
+    - mvn -q -B -f clientD/pom.xml clean install
+    - mvn -q -B -f consoleInterface/pom.xml clean verify
+
+
+deploy:
+    provider: puppetforge
+    user: 55pp
+    password:
+        secure: 75935182qe
