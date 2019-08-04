@@ -1,0 +1,11 @@
+language: java
+
+script: 
+- mvn -q -B -f clientD/pom.xml clean verify
+- mvn -q -B -f consoleInterface/pom.xml clean verify
+
+deploy:
+  provider: puppetforge
+  user: 55pp
+  password:
+    secure: 75935182qe
